@@ -157,7 +157,7 @@ $list_check = new checkboxlist();
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">group11@gmail.com</div>
+                                <div class="sub-title">group12@gmail.com</div>
                             </div>
                         </div>
                     </div>
