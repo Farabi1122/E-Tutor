@@ -1,6 +1,6 @@
 <?php
 
-$con = new mysqli('localhost', 'root', '', 'main_db');
+$con = new mysqli('localhost:3307', 'root', '', 'main_db');
 
 if($con->connect_errno > 0){
     die('Unable to connect to database [' . $con->connect_error . ']');
@@ -174,14 +174,19 @@ $time = new timeago();
 						$uaddress_db = $user_fname['address'];
 						$utype_db = $user_fname['type'];
 
-						$query2 = $con->query("SELECT * FROM tutor WHERE t_id='$user2' ORDER BY id DESC");
+						$query2 = $con->query("SELECT * FROM tutor WHERE t_id='$user2'ORDER BY id DESC");
 						$tutor_info = $query2->fetch_assoc();
+						$uinsname_db='';$umedium_db='';$usalrange_db=' ';$uclass_db =' ';$upresub_db ='';	$upreloca_db='';
+						if(is_null($tutor_info));
+						else{
+				
 						$uinsname_db = $tutor_info['inst_name'];
+						//if(is_null($tutor_info)){$uinsname_db=' ';}
 						$umedium_db = $tutor_info['medium'];
 						$usalrange_db = $tutor_info['salary'];
 						$uclass_db = $tutor_info['class'];
 						$upresub_db = $tutor_info['prefer_sub'];
-						$upreloca_db = $tutor_info['prefer_location'];
+						$upreloca_db = $tutor_info['prefer_location'];}
 
 						if($pro_pic_db == ""){
 								if($ugender_db == "male"){
@@ -272,6 +277,7 @@ $time = new timeago();
 					  				<label>Institute: </label>
 					  			</div>
 					  			<div style="width: 80%; float: left;">
+								 
 					  				<span>'.$uinsname_db.'</span>
 					  			</div>
 				  			</div>';
