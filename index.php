@@ -153,7 +153,6 @@ $time = new timeago();
 							}
 						}else {
 							if (file_exists("image/profilepic/".$pro_pic_db)){
-							//nothing
 							}else{
 									if($ugender_db == "male"){
 									$pro_pic_db = "malepic.png";
@@ -261,13 +260,8 @@ $time = new timeago();
 	
 
 </div>
-<!-- main jquery script -->
 <script  src="js/jquery-3.2.1.min.js"></script>
-
-<!-- homemenu tab script -->
 <script  src="js/homemenu.js"></script>
-
-<!-- topnavfixed script -->
 <script  src="js/topnavfixed.js"></script>
 
 </body>
